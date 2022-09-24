@@ -20,10 +20,10 @@
   <body>
     <header class="header">
       <div class="container head-row">
-        <a class="logo logo-header" href="index.html" lang="en"
-          >Web<span class="logo-black">Studio</span></a
-        >
-        <nav>
+        <nav class="navigation">
+          <a class="logo logo-header" href="index.html" lang="en"
+            >Web<span class="logo-black">Studio</span></a
+          >
           <ul class="pagination">
             <li>
               <a
@@ -34,12 +34,16 @@
               >
             </li>
             <li>
-              <a class="header-link link-black link-hover" href="portfolio.html"
+              <a
+                class="header-link link-black link-hover link-nav"
+                href="portfolio.html"
                 >Портфоліо</a
               >
             </li>
             <li>
-              <a class="header-link link-black link-hover" href="#contacts"
+              <a
+                class="header-link link-black link-hover link-nav"
+                href="#contacts"
                 >Контакти</a
               >
             </li>
@@ -77,7 +81,7 @@
         <h1 class="hero-title title-white title-upper">
           Ефективні рішення для вашого бізнесу
         </h1>
-        <button class="hero-button button-color" type="button">
+        <button data-modal-open class="hero-button button-color" type="button">
           Замовити послугу
         </button>
       </section>
@@ -116,7 +120,7 @@
           </ul>
           <h2 class="features-title section-title">Чим ми займаємося</h2>
           <ul class="features-images">
-            <li>
+            <li class="features-item">
               <img
                 class="features-image"
                 src="./images/img1.jpg"
@@ -124,8 +128,9 @@
                 height="294"
                 width="370"
               />
+              <p class="features-overlay">Десктопні додатки</p>
             </li>
-            <li>
+            <li class="features-item">
               <img
                 class="features-image"
                 src="./images/img2.jpg"
@@ -133,8 +138,9 @@
                 height="294"
                 width="370"
               />
+              <p class="features-overlay">Мобільні додатки</p>
             </li>
-            <li>
+            <li class="features-item">
               <img
                 class="features-image"
                 src="./images/img3.jpg"
@@ -142,6 +148,7 @@
                 height="294"
                 width="370"
               />
+              <p class="features-overlay">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -472,6 +479,16 @@
         </div>
       </div>
     </footer>
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close class="modal-button" type="button">
+          <svg class="modal-svg">
+            <use href="/images/icons/symbol-defs.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
 <!--Кінець(-->
